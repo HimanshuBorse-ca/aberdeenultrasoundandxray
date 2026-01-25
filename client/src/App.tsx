@@ -51,15 +51,27 @@
 
 // export default App;
 
-// 1. Add 'Router' to your wouter imports
+import { Toaster } from "@/components/ui/sonner";
+import { TooltipProvider } from "@/components/ui/tooltip";
 import { Route, Switch, Router } from "wouter"; 
+import ErrorBoundary from "./components/ErrorBoundary";
+import { ThemeProvider } from "./contexts/ThemeContext";
 
-// ... (keep your other imports)
+// Import your Pages
+import Home from "./pages/Home";
+import XRay from "./pages/XRay";
+import Ultrasound from "./pages/Ultrasound";
+import Resources from "./pages/Resources";
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
     <ErrorBoundary>
-      {/* 2. Wrap everything in the Wouter Router with the base path */}
+      {/* Locally, this base path might make the URL look like:
+          localhost:5173/aberdeenultrasoundandxray/
+      */}
       <Router base="/aberdeenultrasoundandxray">
         <ThemeProvider defaultTheme="light">
           <TooltipProvider>
