@@ -18,7 +18,7 @@ export function AberdeenLogo({
       className={className}
       preserveAspectRatio="xMidYMid meet"
     >
-      {/* Icon Background - Rounded Square */}
+      Icon Background - Rounded Square
       <rect
         x="8"
         y="8"
@@ -28,35 +28,48 @@ export function AberdeenLogo({
         fill={iconColor}
       />
 
-      {/* Icon - Medical/Ultrasound Symbol */}
-      <g transform="translate(43, 43)">
-        {/* Stylized "A" representing medical imaging */}
-        <path
-          d="M -15 15 L 0 -15 L 15 15 M -8 5 L 8 5"
-          stroke="white"
-          strokeWidth="2.5"
-          fill="none"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+        {/* Icon Background - Rounded Square */}
+        <rect
+          x="8"
+          y="8"
+          width="70"
+          height="70"
+          rx="12"
+          fill={iconColor}
         />
-        
-        {/* Ultrasound wave lines */}
-        <path
-          d="M -18 -5 Q -15 -8 -12 -5"
-          stroke="white"
-          strokeWidth="1.5"
-          fill="none"
-          strokeLinecap="round"
-        />
-        <path
-          d="M 12 -5 Q 15 -8 18 -5"
-          stroke="white"
-          strokeWidth="1.5"
-          fill="none"
-          strokeLinecap="round"
-        />
-      </g>
 
+        {/* Icon - Medical/Ultrasound Symbol */}
+        <g transform="translate(43, 43)">
+          {/* Stylized "A" outline */}
+          <path
+            d="M -16 18 L 0 -18 L 16 18"
+            stroke="white"
+            strokeWidth="3"
+            fill="none"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+
+          {/* Three ultrasound scan lines */}
+          <path
+            d="M -14 6 L 6 0"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+          <path
+            d="M -14 10 L 4 6"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+          <path
+            d="M -14 14 L 2 12"
+            stroke="white"
+            strokeWidth="3"
+            strokeLinecap="round"
+          />
+        </g>
       {/* Main Text - "Aberdeen" */}
       <text
         x="90"
